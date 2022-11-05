@@ -1,0 +1,23 @@
+<div style="border: 1px solid; width: 500px; height: 300px; padding: 2rem ;margin: 2rem; margin-left:400px;" >
+    <h1 style="text-align: center;">{{title}}</h1>
+    <br/>
+    <form class="form-control"  style="margin-left: 100px;" #studRegForm = "ngForm">
+        <b>Name: </b> <input type="text" name="Name" [(ngModel)] = "name"/>
+        <br/><br/>
+        <b>Email: </b> <input type="email" name="Email" [(ngModel)] = "email"/>
+        <br/><br/>
+        <b>Phone: </b> <input type="tel" name="phone" [(ngModel)] = "phone"/> 
+        <br/><br/>
+        <b>Address: </b><input type="text" name = "Address" [(ngModel)] = "addr"/>
+        <br/><br/>
+        <button (click)="displayData(name, email, phone, addr)"  style="margin-left: 0px; width: 250px; background-color:cornflowerblue ; height: 2rem ; font-size: 1rem; font-weight: 600;">Submit</button>
+    </form>
+</div>
+
+<div *ngIf="toggle">
+    <h2>==> User-Data :- </h2>
+    <h3>Name --> {{ uname }}</h3>
+    <h3>Email --> {{ uemail }}</h3>
+    <h3>Phone --> {{ uphone }}</h3>
+    <h3>Address --> {{ uaddr }}</h3>
+</div>

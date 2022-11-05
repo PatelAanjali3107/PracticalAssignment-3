@@ -1,0 +1,23 @@
+<!-- {{ model | json }} -->
+<h5>{{title}}</h5>
+<h5>Roll no: {{num}}</h5>
+<h5>Name: {{name}}</h5>
+<h5>DOB: {{dob}}</h5>
+
+<h4>Subjects</h4>
+<ul>
+  <li *ngFor="let subject of subjects; index as i;">
+    {{subject.code}} = {{subject.title}} 
+</li>
+<!-- <li ng-repeat='cast in casts'>
+  {{cast}}
+</li> -->
+</ul>
+
+<b>Select cast:</b> 
+<select>
+  <option *ngFor="let cast of casts; index as i">
+    {{cast}}
+  </option>
+</select>
+<app-userdata></app-userdata>
