@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <main>
+            <table border="2" cellpadding="15">
+                <tr>
+                    <th>BRAND</th>
+                    <th>CATEGORY</th>
+                    <th>PRICE</th>
+                    <th>TOTAL</th>
+                    <th>YEARS</th>
+                    <th>PIC</th>
+                </tr>
+                <% data.forEach((item) => { %>
+                    <tr>
+                        <td><%= item.brand %></td>
+                        <td><%= item.catName %></td>
+                        <td><%= item.price %></td>
+                        <td><%= item.totalPrice %></td>
+                        <td><%= item.year %></td>
+                        <td><img height="50" width="50" src="<%= item.picture %>" alt="Image"></td>
+                    </tr>
+                <% }); %>
+            </table>
+        </main>
+    </body>
+</html>

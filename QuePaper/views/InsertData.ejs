@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <main>
+            <h1>Vehicle Data Form</h1>
+            <form action="/GetData" method="post" enctype="multipart/form-data">
+                Vehicle Brand : <input type="text" name="brand" /><br/><br/>
+                Vehicel Category : 
+                <select name="cat">
+                    <% data.forEach((item) => { %>
+                        <option><%= item.catName %></option>
+                    <% }); %>
+                </select><br/><br/>
+                price : <input type="text" name="price" /><br/><br/>
+                Depreciation : <input type="text" name="dep" /><br/><br/>
+                Total Years : <input type="text" name="years" /><br/><br/>
+                Total Price : <input type="text" name="tprice" /><br/><br/>
+                Select Picture : <input type="file" name="myFile" />
+                <input type="submit" value="upload" name="insert" /><br/><br/>
+                <input type="submit" value="insert" name="insert">
+            </form>
+            <form action="/DisplayData">
+                <input type="submit" value="Display" />
+            </form>
+        </main>
+    </body>
+</html>
